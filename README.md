@@ -2,7 +2,7 @@
 
 A demonstration of interactive drag mechanics with spring-back animation using [Framer Motion](https://www.framer.com/motion/) and [Next.js](https://nextjs.org).
 
-
+[You can check it out yourself by clicking this.](https://caaaan.github.io/framer-motion-test/)
 ## Features
 
 - **Click-to-Enable Mechanics**: Click any element 5 times to enable dragging
