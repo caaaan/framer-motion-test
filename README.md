@@ -2,7 +2,6 @@
 
 A demonstration of interactive drag mechanics with spring-back animation using [Framer Motion](https://www.framer.com/motion/) and [Next.js](https://nextjs.org).
 
-![Spring-Back Draggable Elements](https://github.com/caaaan/framer-motion-test/raw/main/public/screenshot.png)
 
 ## Features
 
@@ -54,7 +53,3 @@ To learn more about the technologies used:
 
 - [Framer Motion Documentation](https://www.framer.com/motion/introduction/) - learn about Framer Motion features
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API
-
-## License
-
-MIT
