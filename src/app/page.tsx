@@ -39,36 +39,95 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <ClickableDraggable 
-              id="box1" 
-              backgroundColor="rgb(59, 130, 246)" // Blue
-              forceEnabled={forceEnabled}
-            >
-              <span className="text-lg font-semibold text-white">Box 1</span>
-            </ClickableDraggable>
+          <div className="flex flex-wrap justify-center gap-6">
+            <div className="draggable-element flex flex-col items-center gap-2">
+              <h2 className="text-lg font-semibold">Basic Springy</h2>
+              <div className="rounded-lg p-6 h-48 w-48 flex items-center justify-center relative">
+                <ClickableDraggable 
+                  id="basic" 
+                  backgroundColor="rgb(59, 130, 246)" 
+                  springStrength={300}
+                  springDamping={25}
+                  forceEnabled={forceEnabled}
+                >
+                  <span className="font-semibold text-white">
+                    {forceEnabled ? "Drag Me" : "Click 5x to Enable"}
+                  </span>
+                </ClickableDraggable>
+              </div>
+            </div>
             
-            <ClickableDraggable 
-              id="box2" 
-              backgroundColor="rgb(139, 92, 246)" // Purple
-              springStrength={400}
-              springDamping={15}
-              forceEnabled={forceEnabled}
-            >
-              <span className="text-lg font-semibold text-white">Box 2</span>
-              <span className="text-xs text-white/70">Softer Spring</span>
-            </ClickableDraggable>
+            <div className="draggable-element flex flex-col items-center gap-2">
+              <h2 className="text-lg font-semibold">Bouncy Spring</h2>
+              <div className="rounded-lg p-6 h-48 w-48 flex items-center justify-center relative">
+                <ClickableDraggable 
+                  id="bouncy" 
+                  backgroundColor="rgb(124, 58, 237)" 
+                  springStrength={400}
+                  springDamping={15}
+                  dragElastic={0.9}
+                  forceEnabled={forceEnabled}
+                >
+                  <span className="font-semibold text-white">
+                    {forceEnabled ? "Try Me!" : "Click 5x to Enable"}
+                  </span>
+                </ClickableDraggable>
+              </div>
+            </div>
             
-            <ClickableDraggable 
-              id="box3" 
-              backgroundColor="rgb(236, 72, 153)" // Pink
-              springStrength={1000}
-              springDamping={30}
-              forceEnabled={forceEnabled}
-            >
-              <span className="text-lg font-semibold text-white">Box 3</span>
-              <span className="text-xs text-white/70">Stronger Spring</span>
-            </ClickableDraggable>
+            <div className="draggable-element flex flex-col items-center gap-2">
+              <h2 className="text-lg font-semibold">Strong Spring</h2>
+              <div className="rounded-lg p-6 h-48 w-48 flex items-center justify-center relative">
+                <ClickableDraggable 
+                  id="strong-pull" 
+                  backgroundColor="rgb(239, 68, 68)" 
+                  springStrength={600}
+                  springDamping={20}
+                  dragElastic={0.7}
+                  forceEnabled={forceEnabled}
+                >
+                  <span className="font-semibold text-white">
+                    {forceEnabled ? "Strong Return" : "Click 5x to Enable"}
+                  </span>
+                </ClickableDraggable>
+              </div>
+            </div>
+            
+            <div className="draggable-element flex flex-col items-center gap-2">
+              <h2 className="text-lg font-semibold">Fast Spring</h2>
+              <div className="rounded-lg p-6 h-48 w-48 flex items-center justify-center relative">
+                <ClickableDraggable 
+                  id="fast" 
+                  backgroundColor="rgb(16, 185, 129)" 
+                  springStrength={800}
+                  springDamping={35}
+                  dragElastic={0.4}
+                  forceEnabled={forceEnabled}
+                >
+                  <span className="font-semibold text-white">
+                    {forceEnabled ? "Quick Return" : "Click 5x to Enable"}
+                  </span>
+                </ClickableDraggable>
+              </div>
+            </div>
+            
+            <div className="draggable-element flex flex-col items-center gap-2">
+              <h2 className="text-lg font-semibold">Elastic Bounce</h2>
+              <div className="rounded-lg p-6 h-48 w-48 flex items-center justify-center relative">
+                <ClickableDraggable 
+                  id="elastic" 
+                  backgroundColor="rgb(244, 114, 182)" 
+                  springStrength={400}
+                  springDamping={10}
+                  dragElastic={0.8}
+                  forceEnabled={forceEnabled}
+                >
+                  <span className="font-semibold text-white">
+                    {forceEnabled ? "Extra Bouncy" : "Click 5x to Enable"}
+                  </span>
+                </ClickableDraggable>
+              </div>
+            </div>
           </div>
         </div>
       </main>
